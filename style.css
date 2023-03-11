@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", "sans-serif";
+  cursor: pointer;
+}
+body {
+  overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+.pig-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9.6rem;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #d6336c, #f06595);
+}
+.btns {
+  background: linear-gradient(to right, #d6336c, #f06595);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem 0rem 0rem 0rem;
+}
+.players-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.player {
+  width: 60rem;
+  height: 70rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  padding: 3.6rem;
+  transition: background-color 2s;
+}
+.player-active {
+  background-color: #ffdeeb;
+}
+.player-1-bg-color {
+  background-color: #faa2c1;
+}
+.player--0 {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.player--1 {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.player-text {
+  font-size: 5rem;
+  font-weight: 550;
+  color: #c2255c;
+}
+.player-score {
+  color: #d6336c;
+  font-size: 8rem;
+  margin-top: -15rem;
+}
+.current-score-text {
+  color: #fff0f6;
+  font-size: 3rem;
+}
+.current-score {
+  display: block;
+  font-size: 5rem;
+  margin-top: 1rem;
+  color: #fff0f6;
+}
+.current-score-flex {
+  background-color: #c2255c;
+  padding: 2.5rem 3.8rem;
+  border-radius: 10px;
+}
+.dice {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 12rem;
+  height: 12rem;
+  display: block;
+  transform: translate(-50%);
+}
+.won {
+  font-size: 3rem;
+  color: #c2255c;
+  font-weight: 600;
+}
+.btn {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.75px;
+}
+.btn:focus {
+  outline: none;
+}
+.btn--new {
+  /* position: absolute;
+  top: 18%;
+  left: 50%; */
+  padding: 1rem 2.4rem;
+  border-radius: 100px;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* transform: translate(-50%); */
+}
+.btn--roll,
+.btn--hold {
+  padding: 1rem 2.4rem;
+  border-radius: 100px;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* transform: translate(-50%); */
+}
+/* .btn--roll {
+  top: 60%;
+}
+.btn--hold {
+  top: 68%;
+} */
+.btn--roll:link,
+.btn--roll:visited {
+  background-color: #ffe3e3;
+}
+.btn--new:link .btn--new:visited {
+  background-color: #ffe3e3;
+}
+.btn--hold:link,
+.btn--hold:visited {
+  background-color: #ffe3e3;
+}
+.btn--roll:hover,
+.btn--roll:active {
+  background-color: #ffe3e3;
+}
+.btn--new:hover,
+.btn--new:active {
+  background-color: #ffe3e3;
+}
+.btn--hold:hover,
+.btn--hold:active {
+  background-color: #ffe3e3;
+}
+
+.game-instructions {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  font-size: 2rem;
+  width: 100rem;
+  padding: 3.6rem 9.6rem;
+  color: #c2255c;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close-btn {
+  display: block;
+  margin-left: auto;
+  font-size: 8rem;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.about-head {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.game-points {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.click-here {
+  z-index: 6;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  font-size: 2rem;
+  color: #c2255c;
+  background-color: #ffdeeb;
+  padding: 1rem 2.4rem;
+  border-radius: 100px;
+  font-weight: 600;
+  transform: translate(-50%);
+  /* transition: all 1s; */
+  display: inline;
+}
+.click-here:hover {
+  background-color: #fff;
+}
+.hidden {
+  display: none;
+}

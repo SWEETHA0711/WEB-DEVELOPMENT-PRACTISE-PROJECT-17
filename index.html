@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Pig Game</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="queries.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="btns">
+    
+      <button class="btn btn--new">🔄 New Game</button>
+      <button class="btn btn--roll">🎲 Roll Dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+      
+      
+    </div>
+    <div class="pig-game">
+     
+      <p class="click-here" >CLICK HERE TO GET GAME INSTRUCTIONS</p>
+     <div class="players-flex">
+        <section class="player player--0 player-active player-0">
+          <p class="player-text">PLAYER 1</p>
+          <span class="player-score player-score-0" id="scores--0">0</span>
+
+          <div class="current-score-flex">
+            <p class="current-score-text">CURRENT</p>
+            <span class="current-score current--0">0</span>
+          </div>
+        </section>
+        <section class="player player--1 player-1-bg-color player-1">
+          <p class="player-text">PLAYER 2</p>
+          <span class="player-score player-score-1" id="scores--1">0</span>
+
+          <div class="current-score-flex">
+            <p class="current-score-text">CURRENT</p>
+            <span class="current-score current--1">0</span>
+          </div>
+        </section>
+
+      </div>
+     
+    
+      <div>
+        <img src="dice-5.png" alt="dice n0.5" class="dice hidden" />
+      </div>
+    </div>
+    <div>
+      <div class="game-instructions hidden">
+        <div class="about">
+          <p class="about-head">ABOUT THE PIG GAME</p>
+          <span class="close-btn">&times;</span>
+        </div>
+        <p class="info-text">
+         <ul class="game-points">
+          <li>PLAYER 1 WILL ROLL THE DICE</li>                                                  
+          <li>IF THE ROLLED DICE NUMBER IS 1 THE CHANCE OF PLAYING THE GAME WILL BE SWITCHED TO THE PLAYER 2 AND VICE VERSA.</li>
+          <li>WHEN THE RESPECTIVE PLAYER CLICKS THE HOLD BUTTON, THE CURRENT SCORE GETS ADDED TO THE TOTAL SCORE.</li>
+          <li>WHEN THE RESPECTIVE PLAYER CLICKS THE HOLD BUTTON, IF THE TOTAL SCORE IS GREATER THAN 100, THAT RESPECTIVE PLAYER WINS THE GAME</li>
+          <li>WHEN THE RESPECTIVE PLAYER WINS THE GAME THE BACKGROUND COLOR BECOMES BLACK</li>
+          <li>CLICK NEW GAME TO PLAY AGAIN FROM THE BEGINNING!</li>
+         </ul>
+        </p>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
